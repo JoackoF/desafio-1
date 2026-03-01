@@ -25,7 +25,6 @@ VALUES
     ('Ron', 'Weasley'),
     ('Lisa', 'Simpson');
 
--- Registros para la tabla intermedia
 INSERT INTO
     alumno_materia (id_alumno, id_materia)
 VALUES

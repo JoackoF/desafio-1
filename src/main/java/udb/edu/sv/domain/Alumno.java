@@ -2,6 +2,7 @@ package udb.edu.sv.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Alumno {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,5 +28,5 @@ public class Alumno {
             joinColumns = @JoinColumn(name = "id_alumno"),
             inverseJoinColumns = @JoinColumn(name = "id_materia")
     )
-    private List<Materia> materias;
+    private List<Materia> materias = new ArrayList<>();
 }
