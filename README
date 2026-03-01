@@ -1,0 +1,47 @@
+# Sistema Escolar – Persistencia con Spring Boot y H2
+
+## Descripción
+Este proyecto implementa la estructura de persistencia de un sistema escolar básico
+utilizando Spring Boot, Spring Data JPA y una base de datos H2.
+
+Se gestionan las entidades:
+- Profesor
+- Materia
+- Alumno
+- Relación Alumno–Materia
+
+La base de datos se inicializa mediante los archivos `schema.sql` y `data.sql`.
+
+## Tecnologías utilizadas
+- Java 17
+- Spring Boot 3.2.x
+- Spring Data JPA
+- H2 Database
+- Maven
+
+## Configuración de la base de datos
+La aplicación utiliza H2 en modo archivo para permitir persistencia entre ejecuciones.
+
+Acceso a la consola H2:
+http://localhost:8080/h2-console
+
+JDBC URL:
+jdbc:h2:file:./data/UdbSchool
+
+Usuario: `sa`  
+Contraseña: *(vacía)*
+
+## Pruebas unitarias
+Se incluyen pruebas unitarias que insertan dos registros en cada tabla
+utilizando `@Transactional` y `@Commit`.
+
+Las sentencias SQL generadas por Hibernate se muestran en consola
+para verificar los INSERT realizados durante las pruebas.
+
+## Video de demostración
+Enlace al video de la demostración del proyecto:
+
+👉 **[Ver video](https://drive.google.com/file/d/1Z8_5tFXxZH1atX6V9E6dwdz5DyXyPjnS/view?usp=sharing)**
+
+## Autor
+- Joaquín Fuentes
